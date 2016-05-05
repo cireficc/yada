@@ -1,0 +1,9 @@
+language: ruby
+bundler_args: --without production
+rvm:
+  - 2.3.0
+env:
+  - DB=postgresql
+cache: bundler
+before_script:
+  - psql -c 'create database yada_test' -U postgres
