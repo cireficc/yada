@@ -36,7 +36,6 @@ class CreateUsers < ActiveRecord::Migration[5.0]
       t.integer :ambitiousness
       t.boolean :has_children
       t.integer :wants_children
-      t.boolean :has_pets
       # pets (taggable)
       
       t.string :catch

@@ -48,7 +48,6 @@ ActiveRecord::Schema.define(version: 20160505225139) do
     t.integer  "ambitiousness"
     t.boolean  "has_children"
     t.integer  "wants_children"
-    t.boolean  "has_pets"
     t.string   "catch"
     t.text     "summary"
     t.text     "current_life"
