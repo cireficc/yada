@@ -1,12 +1,12 @@
 class CreateUsers < ActiveRecord::Migration[5.0]
   def change
     create_table :users do |t|
-      t.string :username
-      t.string :password_digest
+      t.string :username, null: false
+      t.string :password_digest, null: false
       t.string :email
       
       t.string :name
-      t.datetime :birthday
+      t.datetime :birthday, null: false
       t.string :country
       t.string :city
       t.string :zip_code
@@ -17,7 +17,7 @@ class CreateUsers < ActiveRecord::Migration[5.0]
       # sexual_gender (taggable)
       # sexual_orientation (taggable)
       t.string :ethnicity, array: true, default: []
-      t.integer :relationship_status
+      t.integer :relationship_status, null: false
       t.integer :relationship_type
       t.integer :longest_relationship
       t.integer :height
@@ -47,12 +47,12 @@ class CreateUsers < ActiveRecord::Migration[5.0]
       t.text :most_important
       t.text :talk_more
       
-      t.integer :gender_interest
-      t.integer :age_min
-      t.integer :age_max
-      t.boolean :desire_single
-      t.boolean :desire_near
-      t.string :relationship_interest, array: true, default: []
+      t.integer :gender_interest, null: false
+      t.integer :age_min, null: false
+      t.integer :age_max, null: false
+      t.boolean :desire_single, null: false
+      t.boolean :desire_near, null: false
+      t.string :relationship_interest, array: true, default: ["new friends"]
       
       t.timestamps
     end

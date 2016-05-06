@@ -17,19 +17,19 @@ ActiveRecord::Schema.define(version: 20160505225139) do
   enable_extension "plpgsql"
 
   create_table "users", force: :cascade do |t|
-    t.string   "username"
-    t.string   "password_digest"
+    t.string   "username",                                        null: false
+    t.string   "password_digest",                                 null: false
     t.string   "email"
     t.string   "name"
-    t.datetime "birthday"
+    t.datetime "birthday",                                        null: false
     t.string   "country"
     t.string   "city"
     t.string   "zip_code"
     t.string   "address"
     t.float    "latitude"
     t.float    "longitude"
-    t.string   "ethnicity",             default: [],              array: true
-    t.integer  "relationship_status"
+    t.string   "ethnicity",             default: [],                           array: true
+    t.integer  "relationship_status",                             null: false
     t.integer  "relationship_type"
     t.integer  "longest_relationship"
     t.integer  "height"
@@ -55,14 +55,14 @@ ActiveRecord::Schema.define(version: 20160505225139) do
     t.text     "favorite"
     t.text     "most_important"
     t.text     "talk_more"
-    t.integer  "gender_interest"
-    t.integer  "age_min"
-    t.integer  "age_max"
-    t.boolean  "desire_single"
-    t.boolean  "desire_near"
-    t.string   "relationship_interest", default: [],              array: true
-    t.datetime "created_at",                         null: false
-    t.datetime "updated_at",                         null: false
+    t.integer  "gender_interest",                                 null: false
+    t.integer  "age_min",                                         null: false
+    t.integer  "age_max",                                         null: false
+    t.boolean  "desire_single",                                   null: false
+    t.boolean  "desire_near",                                     null: false
+    t.string   "relationship_interest", default: ["new friends"],              array: true
+    t.datetime "created_at",                                      null: false
+    t.datetime "updated_at",                                      null: false
   end
 
 end
