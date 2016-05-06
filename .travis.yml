@@ -3,9 +3,9 @@ bundler_args: --without production
 rvm:
   - 2.3.0
 env:
-  - DB=postgresql
-  - RAILS_ENV=test
-  - SECRET_KEY_BASE="$(bundle exec rake secret)"
+  DB=postgresql
+  RAILS_ENV=test
+  secret_key_base="$(bundle exec rake secret)"
 cache: bundler
 before_script:
   - psql -c 'create database yada_test' -U postgres
