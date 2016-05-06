@@ -10,12 +10,18 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "should create user" do
+  test "should create user if parameters valid" do
     assert_difference('User.count') do
       post users_url, params: { user: @user.attributes }
     end
 
     assert_response 201
+  end
+  
+  test "should not create user if parameters invalid" do
+    @user.username = nil
+    
+    assert_raises(ActiveRecord::StatementInvalid) { post users_url, params: { user: @user.attributes } }
   end
 
   test "should show user" do
@@ -23,9 +29,15 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "should update user" do
+  test "should update user if parameters valid" do
     patch user_url(@user), params: { user: @user.attributes }
     assert_response 200
+  end
+  
+  test "should not update user if parameters invalid" do
+    @user.username = nil
+    
+    assert_raises(ActiveRecord::StatementInvalid) { patch user_url(@user), params: { user: @user.attributes } }
   end
 
   test "should destroy user" do
