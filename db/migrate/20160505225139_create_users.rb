@@ -17,7 +17,7 @@ class CreateUsers < ActiveRecord::Migration[5.0]
       # sexual_gender (taggable)
       # sexual_orientation (taggable)
       t.string :ethnicity, array: true, default: []
-      t.integer :relationship_status, null: false
+      t.integer :relationship_status, null: false, default: 0
       t.integer :relationship_type
       t.integer :longest_relationship
       t.integer :height
@@ -47,12 +47,12 @@ class CreateUsers < ActiveRecord::Migration[5.0]
       t.text :most_important
       t.text :talk_more
       
-      t.integer :gender_interest, null: false
-      t.integer :age_min, null: false
-      t.integer :age_max, null: false
-      t.boolean :desire_single, null: false
-      t.boolean :desire_near, null: false
-      t.string :relationship_interest, array: true, default: ["new friends"]
+      t.integer :gender_interest, null: false, default: 0
+      t.integer :age_min, null: false, default: 18
+      t.integer :age_max, null: false, default: 99
+      t.boolean :desire_single, null: false, default: true
+      t.boolean :desire_near, null: false, default: true
+      t.string :relationship_interest, array: true, default: []
       
       t.timestamps
     end
