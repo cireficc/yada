@@ -1,7 +1,7 @@
 case Rails.env
 when "development"
 	chris = User.create(username: "chriscirefice", password: "chris", email: "email@domain.com", name: "chris",
-						birthday: DateTime.parse("1992-10-12 00:00:00"), ethnicity: ["white"],
+						birthdate: DateTime.parse("1992-10-12 00:00:00"), ethnicity: ["white"],
 						relationship_status: 0, relationship_type: 0, longest_relationship: 1, height: 168,
 						body_type: 1, hair_color: 2, eye_color: 2, diet: 0, smoking: 0, drinking: 1,
 						drugs: 0, religion: 3, religion_importance: 0, education: 4, education_status: 0,
