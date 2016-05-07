@@ -20,7 +20,7 @@ class CreateUsers < ActiveRecord::Migration[5.0]
       t.integer :relationship_status, null: false, default: 0
       t.integer :relationship_type
       t.integer :longest_relationship
-      t.integer :height
+      t.integer :height, default: 168
       t.integer :body_type
       t.integer :hair_color
       t.integer :eye_color

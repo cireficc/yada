@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 20160505225139) do
     t.integer  "relationship_status",   default: 0,    null: false
     t.integer  "relationship_type"
     t.integer  "longest_relationship"
-    t.integer  "height"
+    t.integer  "height",                default: 168
     t.integer  "body_type"
     t.integer  "hair_color"
     t.integer  "eye_color"
