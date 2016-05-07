@@ -15,7 +15,7 @@ class UsersController < ApplicationController
 
   # POST /users
   def create
-    @user = User.new(user_params)
+    @user = User.new(user_create_params)
 
     if @user.save
       render json: @user, status: :created, location: @user
@@ -26,7 +26,7 @@ class UsersController < ApplicationController
 
   # PATCH/PUT /users/1
   def update
-    if @user.update(user_params)
+    if @user.update(user_update_params)
       render json: @user
     else
       render json: @user.errors, status: :unprocessable_entity
@@ -45,12 +45,18 @@ class UsersController < ApplicationController
     end
 
     # Only allow a trusted parameter "white list" through.
-    def user_params
-      params.require(:user).permit([:username, :password_digest, :email, :name, :birthday,:ethnicity, :relationship_status,
-                  :relationship_type, :longest_relationship, :height, :body_type, :hair_color, :eye_color, :diet,
-                  :smoking, :drinking,:drugs, :religion, :religion_importance, :education, :education_status,
-                  :ambitiousness, :has_children, :wants_children, :catch, :summary, :current_life, :free_time,
-                  :favorite, :most_important, :talk_more, :gender_interest, :age_min, :age_max, :desire_single,
-                  :desire_near, :relationship_interest])
+    
+    def user_create_params
+      params.require(:user).permit([:username, :password, :password_confirmation, :email, :name, :birthdate])
+    end
+    
+    def user_update_params
+      params.require(:user).permit([:username, :email, :name, :birthdate, :relationship_status, :relationship_type,
+                                    :longest_relationship, :height, :body_type, :hair_color, :eye_color, :diet,
+                                    :smoking, :drinking, :drugs, :religion, :religion_importance, :zodiac_sign,
+                                    :education, :education_status, :ambitiousness, :has_children, :wants_children,
+                                    :catch, :summary, :current_life, :free_time, :favorite, :most_important, :talk_more,
+                                    :gender_interest, :age_min, :age_max, :desire_single, :desire_near, :ethnicity => [],
+                                    :relationship_interest => []])
     end
 end
