@@ -37,6 +37,8 @@ class User < ApplicationRecord
   validates :age_min, inclusion: { in: VALID_AGE_RANGE, message: VALID_AGE_RANGE_MESSAGE }
   validates :age_max, inclusion: { in: VALID_AGE_RANGE, message: VALID_AGE_RANGE_MESSAGE }
 	
+	private
+	
 	def at_least_18
 	  self.errors.add(:birthdate, "must be 18 years or older") if (self.birthdate && 18.years.ago.to_date < self.birthdate)
 	end
