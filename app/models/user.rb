@@ -29,16 +29,7 @@ class User < ApplicationRecord
             if: :username_changed?
   
   validate :at_least_18
-  
-  VALID_AGE_RANGE = 18..99
-  VALID_AGE_RANGE_MESSAGE = "must be between 18 and 99"
-  
-  validates :height, inclusion: { in: 50..300, message: "must be between 50 and 300 centimeters" }
-  validates :age_min, inclusion: { in: VALID_AGE_RANGE, message: VALID_AGE_RANGE_MESSAGE }
-  validates :age_max, inclusion: { in: VALID_AGE_RANGE, message: VALID_AGE_RANGE_MESSAGE }
-  
-  has_secure_password
-  
+
   enum relationship_status: {
     single: 0,
     seeing_someone: 1,
@@ -60,6 +51,14 @@ class User < ApplicationRecord
     five_years: 5,
     more_than_five_years: 6
   }
+  
+  validates :height, inclusion: { in: 50..300, message: "must be between 50 and 300 centimeters" }
+  
+  VALID_AGE_RANGE = 18..99
+  VALID_AGE_RANGE_MESSAGE = "must be between 18 and 99"
+  
+  validates :age_min, inclusion: { in: VALID_AGE_RANGE, message: VALID_AGE_RANGE_MESSAGE }
+  validates :age_max, inclusion: { in: VALID_AGE_RANGE, message: VALID_AGE_RANGE_MESSAGE }
   
   enum body_type: {
     rather_not_say: 0,
@@ -189,6 +188,8 @@ class User < ApplicationRecord
     women: 1,
     everyone: 2
   }
+  
+  has_secure_password
 	
 	private
 	
