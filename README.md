@@ -7,3 +7,17 @@
 #yada
 
 Yet another dating app!
+
+## API Documentation
+The documentation is generated using [Yard-restful](https://github.com/kraft001/yard-restful).
+To generate and view the documentation:
+
+1. Run `bundle exec yard doc`
+2. Run the Rails server
+3. Navigate to `/api/docs/index.html` in a browser
+
+To view what still needs to be documented: `bundle exec yardoc --list-undoc`
+
+## Requirements
+- Ruby 2.3.0+
+- [Bundler](http://bundler.io) 1.10.6+
