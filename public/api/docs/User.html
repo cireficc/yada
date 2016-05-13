@@ -1,0 +1,501 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Class: User
+  
+    &mdash; YADA API Documentation
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/custom.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '';
+  framesUrl = "frames.html#!User.html";
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/rest_plugin.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="search">
+  
+    <a class="full_list_link" id="resource_list_link"
+        href="resource_list.html">
+      Resources
+    </a>
+  
+    <a class="full_list_link" id="object_list_link"
+        href="object_list.html">
+      Objects
+    </a>
+  
+</div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content" style="padding-top: 12px;">
+		<div class="service">
+  <h1 class="noborder title">YADA API Documentation</h1>
+    <a class="back" href="index.html" title="back to the overview">&laquo; back to overview</a>
+    <h2>User</h2>
+    <div class="description">
+  <h3>Enums</h3>
+
+<p><code>enum relationship_status: [:single, :seeing_someone, :married, :open_relationship]</code></p>
+
+<p><code>enum relationship_type: [:monogamous, :polygamous]</code></p>
+
+<p><code>enum longest_relationship: [:six_months, :one_year, :two_years, :three_years, :four_years, :five_years, :more_than_five_years]</code></p>
+
+<p><code>enum body_type: [:rather_not_say, :thin, :average_build, :a_little_extra, :curvy, :full_figured, :fit, :jacked]</code></p>
+
+<p><code>enum hair_color: [:black, :brown, :blond, :auburn, :chestnut, :red, :gray, :white, :dyed, :bald]</code></p>
+
+<p><code>enum eye_color: [:amber, :blue, :brown, :gray, :green, :hazel, :other]</code></p>
+
+<p><code>enum diet: [:omnivore, :vegetarian, :vegan, :kosher, :halal]</code></p>
+
+<p><code>enum smoking: [:no, :sometimes, :often]</code></p>
+
+<p><code>enum drinking: [:no, :socially, :often]</code></p>
+
+<p><code>enum drugs: [:no, :sometimes, :often]</code></p>
+
+<p><code>enum religion: [:agnosticism, :atheism, :buddhism, :catholicism, :christianity, :hinduism, :islam, :judaism, :sikh, :other]</code></p>
+
+<p><code>enum religion_importance: [:not_important, :somewhat_important, :important]</code></p>
+
+<p><code>enum zodiac_sign: [:aquarius, :pisces, :aries, :taurus, :gemini, :cancer, :leo, :virgo, :libra, :scorpio, :sagittarius, :capricorn]</code></p>
+
+<p><code>enum education: [:high_school, :two_year_college, :vocational_school, :bachelor, :master, :doctorate, :other]</code></p>
+
+<p><code>enum education_status: [:dropped_out, :working_on, :completed]</code></p>
+
+<p><code>enum ambitiousness: [:not_ambitious, :somewhat_ambitious, :ambitious, :very_ambitious]</code></p>
+
+<p><code>enum wants_children: [:maybe_want, :want, :does_not_want]</code></p>
+
+<p><code>enum gender_interest: [:men, :women, :everyone]</code></p>
+
+</div>
+
+  <h3 class="object_properties_title">Object properties</h3>
+  
+
+  <div class="parameters even">
+    
+		<ul>
+  		
+				<li>
+					<span class="name">id</span>
+					<span class="type"><tt>Integer</tt></span>
+					<span class="text"><p>The id of the User</p>
+</span>
+				</li>
+  		
+				<li>
+					<span class="name">username</span>
+					<span class="type"><tt>String</tt></span>
+					<span class="text"><p>The username of the User</p>
+</span>
+				</li>
+  		
+				<li>
+					<span class="name">email</span>
+					<span class="type"><tt>String</tt></span>
+					<span class="text"><p>The email of the User</p>
+</span>
+				</li>
+  		
+				<li>
+					<span class="name">name</span>
+					<span class="type"><tt>String</tt></span>
+					<span class="text"><p>The name of the User</p>
+</span>
+				</li>
+  		
+				<li>
+					<span class="name">birthdate</span>
+					<span class="type"><tt>Date</tt></span>
+					<span class="text"><p>When the User was born</p>
+</span>
+				</li>
+  		
+				<li>
+					<span class="name">country</span>
+					<span class="type"><tt>String</tt></span>
+					<span class="text"><p>The country of the User</p>
+</span>
+				</li>
+  		
+				<li>
+					<span class="name">city</span>
+					<span class="type"><tt>String</tt></span>
+					<span class="text"><p>The city of the User</p>
+</span>
+				</li>
+  		
+				<li>
+					<span class="name">zip_code</span>
+					<span class="type"><tt>String</tt></span>
+					<span class="text"><p>The zip code of the User</p>
+</span>
+				</li>
+  		
+				<li>
+					<span class="name">address</span>
+					<span class="type"><tt>String</tt></span>
+					<span class="text"><p>The address of the User</p>
+</span>
+				</li>
+  		
+				<li>
+					<span class="name">latitude</span>
+					<span class="type"><tt>Float</tt></span>
+					<span class="text"><p>The latitude of the User</p>
+</span>
+				</li>
+  		
+				<li>
+					<span class="name">longitude</span>
+					<span class="type"><tt>Float</tt></span>
+					<span class="text"><p>The longitude of the User</p>
+</span>
+				</li>
+  		
+				<li>
+					<span class="name">ethnicity</span>
+					<span class="type"><tt>String[]</tt></span>
+					<span class="text"><p>The ethnicity of the User</p>
+</span>
+				</li>
+  		
+				<li>
+					<span class="name">relationship_status</span>
+					<span class="type"><tt>Integer</tt></span>
+					<span class="text"><p>The relationship status of the User</p>
+</span>
+				</li>
+  		
+				<li>
+					<span class="name">relationship_type</span>
+					<span class="type"><tt>Integer</tt></span>
+					<span class="text"><p>The relationship type of the User</p>
+</span>
+				</li>
+  		
+				<li>
+					<span class="name">longest_relationship</span>
+					<span class="type"><tt>Integer</tt></span>
+					<span class="text"><p>The longest relationship of the User</p>
+</span>
+				</li>
+  		
+				<li>
+					<span class="name">height</span>
+					<span class="type"><tt>Integer</tt></span>
+					<span class="text"><p>The height of the User</p>
+</span>
+				</li>
+  		
+				<li>
+					<span class="name">body_type</span>
+					<span class="type"><tt>Integer</tt></span>
+					<span class="text"><p>The body type of the User</p>
+</span>
+				</li>
+  		
+				<li>
+					<span class="name">hair_color</span>
+					<span class="type"><tt>Integer</tt></span>
+					<span class="text"><p>The hair color of the User</p>
+</span>
+				</li>
+  		
+				<li>
+					<span class="name">eye_color</span>
+					<span class="type"><tt>Integer</tt></span>
+					<span class="text"><p>The eye color of the User</p>
+</span>
+				</li>
+  		
+				<li>
+					<span class="name">diet</span>
+					<span class="type"><tt>Integer</tt></span>
+					<span class="text"><p>The diet of the User</p>
+</span>
+				</li>
+  		
+				<li>
+					<span class="name">smoking</span>
+					<span class="type"><tt>Integer</tt></span>
+					<span class="text"><p>How often the User smokes</p>
+</span>
+				</li>
+  		
+				<li>
+					<span class="name">drinking</span>
+					<span class="type"><tt>Integer</tt></span>
+					<span class="text"><p>How often the User drinks</p>
+</span>
+				</li>
+  		
+				<li>
+					<span class="name">drugs</span>
+					<span class="type"><tt>Integer</tt></span>
+					<span class="text"><p>How often the User does drugs</p>
+</span>
+				</li>
+  		
+				<li>
+					<span class="name">religion</span>
+					<span class="type"><tt>Integer</tt></span>
+					<span class="text"><p>The religion of the User</p>
+</span>
+				</li>
+  		
+				<li>
+					<span class="name">religion_importance</span>
+					<span class="type"><tt>Integer</tt></span>
+					<span class="text"><p>How important the User&#39;s religion is to them</p>
+</span>
+				</li>
+  		
+				<li>
+					<span class="name">zodiac_sign</span>
+					<span class="type"><tt>Integer</tt></span>
+					<span class="text"><p>The zodiac sign of the User</p>
+</span>
+				</li>
+  		
+				<li>
+					<span class="name">education</span>
+					<span class="type"><tt>Integer</tt></span>
+					<span class="text"><p>The level of education of the user</p>
+</span>
+				</li>
+  		
+				<li>
+					<span class="name">education_status</span>
+					<span class="type"><tt>Integer</tt></span>
+					<span class="text"><p>The education status of the User</p>
+</span>
+				</li>
+  		
+				<li>
+					<span class="name">ambitiousness</span>
+					<span class="type"><tt>Integer</tt></span>
+					<span class="text"><p>How ambitious the User is</p>
+</span>
+				</li>
+  		
+				<li>
+					<span class="name">has_children</span>
+					<span class="type"><tt>Boolean</tt></span>
+					<span class="text"><p>The has children of the User</p>
+</span>
+				</li>
+  		
+				<li>
+					<span class="name">wants_children</span>
+					<span class="type"><tt>Integer</tt></span>
+					<span class="text"><p>The User&#39;s desire to have children</p>
+</span>
+				</li>
+  		
+				<li>
+					<span class="name">catch</span>
+					<span class="type"><tt>String</tt></span>
+					<span class="text"><p>The User&#39;s short phrase to catch a potential matche&#39;s attention</p>
+</span>
+				</li>
+  		
+				<li>
+					<span class="name">summary</span>
+					<span class="type"><tt>String</tt></span>
+					<span class="text"><p>The summary of the User</p>
+</span>
+				</li>
+  		
+				<li>
+					<span class="name">current_life</span>
+					<span class="type"><tt>String</tt></span>
+					<span class="text"><p>What the User is doing currently in their life</p>
+</span>
+				</li>
+  		
+				<li>
+					<span class="name">free_time</span>
+					<span class="type"><tt>String</tt></span>
+					<span class="text"><p>What the User does in their free time</p>
+</span>
+				</li>
+  		
+				<li>
+					<span class="name">favorite</span>
+					<span class="type"><tt>String</tt></span>
+					<span class="text"><p>The favorite things of the User</p>
+</span>
+				</li>
+  		
+				<li>
+					<span class="name">most_important</span>
+					<span class="type"><tt>String</tt></span>
+					<span class="text"><p>The most important things to the User</p>
+</span>
+				</li>
+  		
+				<li>
+					<span class="name">talk_more</span>
+					<span class="type"><tt>String</tt></span>
+					<span class="text"><p>A potential match should message the User if</p>
+</span>
+				</li>
+  		
+				<li>
+					<span class="name">gender_interest</span>
+					<span class="type"><tt>Integer</tt></span>
+					<span class="text"><p>The genders that the User is interested in</p>
+</span>
+				</li>
+  		
+				<li>
+					<span class="name">age_min</span>
+					<span class="type"><tt>Integer</tt></span>
+					<span class="text"><p>The minimum age the User wants to match with</p>
+</span>
+				</li>
+  		
+				<li>
+					<span class="name">age_max</span>
+					<span class="type"><tt>Integer</tt></span>
+					<span class="text"><p>The maximum age the User wants to match with</p>
+</span>
+				</li>
+  		
+				<li>
+					<span class="name">desire_single</span>
+					<span class="type"><tt>Boolean</tt></span>
+					<span class="text"><p>Whether or not the User desires matches that are single</p>
+</span>
+				</li>
+  		
+				<li>
+					<span class="name">desire_near</span>
+					<span class="type"><tt>Boolean</tt></span>
+					<span class="text"><p>Whether or not the User desires matches near to them</p>
+</span>
+				</li>
+  		
+				<li>
+					<span class="name">relationship_interest</span>
+					<span class="type"><tt>String[]</tt></span>
+					<span class="text"><p>The User&#39;s relationship interests</p>
+</span>
+				</li>
+  		
+				<li>
+					<span class="name">create_at</span>
+					<span class="type"><tt>Date</tt></span>
+					<span class="text"><p>When the User was created</p>
+</span>
+				</li>
+  		
+				<li>
+					<span class="name">updated_at</span>
+					<span class="type"><tt>Date</tt></span>
+					<span class="text"><p>When the Phrase was last updated</p>
+</span>
+				</li>
+  		
+	  </ul>
+	</div>
+
+
+  
+    <h3>Examples</h3>
+    
+      <div class="example">
+        <pre class="code json"><code class="json"> { &quot;id&quot;: 1,
+   &quot;username&quot;: &quot;chriscirefice&quot;,
+   &quot;email&quot;: &quot;email@domain.com&quot;,
+   &quot;name&quot;: &quot;chris&quot;,
+   &quot;birthdate&quot;: &quot;1992-10-12T00:00:00.000Z&quot;,
+   &quot;country&quot;: null,
+   &quot;city&quot;: null,
+   &quot;zip_code&quot;: null,
+   &quot;address&quot;: null,
+   &quot;latitude&quot;: null,
+   &quot;longitude&quot;: null,
+   &quot;ethnicity&quot;: [&quot;white&quot;],
+   &quot;relationship_status&quot;: &quot;single&quot;,
+   &quot;relationship_type&quot;: &quot;monogamous&quot;,
+   &quot;longest_relationship&quot;: &quot;one_year&quot;,
+   &quot;height&quot;: 168,
+   &quot;body_type&quot;: &quot;average_build&quot;,
+   &quot;hair_color&quot;: &quot;brown&quot;,
+   &quot;eye_color&quot;: &quot;brown&quot;,
+   &quot;diet&quot;: &quot;omnivore&quot;,
+   &quot;smoking&quot;: &quot;no&quot;,
+   &quot;drinking&quot;: &quot;socially&quot;,
+   &quot;drugs&quot;: &quot;no&quot;,
+   &quot;religion&quot;: &quot;atheism&quot;,
+   &quot;religion_importance&quot;: &quot;not_important&quot;,
+   &quot;zodiac_sign&quot;: &quot;libra&quot;,
+   &quot;education&quot;: &quot;bachelor&quot;,
+   &quot;education_status&quot;: &quot;working_on&quot;,
+   &quot;ambitiousness&quot;: &quot;very_ambitious&quot;,
+   &quot;has_children&quot;: false,
+   &quot;wants_children&quot;: &quot;want&quot;,
+   &quot;catch&quot;: &quot;Chris is a cool guy!&quot;,
+   &quot;summary&quot;: &quot;A summary&quot;,
+   &quot;current_life&quot;: &quot;What I&#39;m doing with my life&quot;,
+   &quot;free_time&quot;: &quot;What I do in my free time&quot;,
+   &quot;favorite&quot;: &quot;My favorite things&quot;,
+   &quot;most_important&quot;: &quot;Things that are most important to me&quot;,
+   &quot;talk_more&quot;: &quot;We should talk if...&quot;,
+   &quot;gender_interest&quot;: &quot;women&quot;,
+   &quot;age_min&quot;: 18,
+   &quot;age_max&quot;: 32,
+   &quot;desire_single&quot;: true,
+   &quot;desire_near&quot;: false,
+   &quot;relationship_interest&quot;: [&quot;new friends&quot;,&quot;long-term dating&quot;],
+   &quot;created_at&quot;: &quot;2016-05-13T06:37:30.428Z&quot;,
+   &quot;updated_at&quot;: &quot;2016-05-13T06:37:30.428Z&quot;
+ }
+</code></pre>
+
+      </div>
+    
+  
+
+
+
+</div>
+
+
+	</div>
+
+    <div id="footer">
+  Generated on Fri May 13 07:06:55 2016 with ruby-2.3.0
+</div>
+
+  </body>
+</html>
