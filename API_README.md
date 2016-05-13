@@ -1,0 +1,2 @@
+The YADA API powers Android, iOS and web clients. It is written using Ruby on Rails 5 with PostgreSQL
+as the backing store, and documented with the [Yard-restful gem](https://github.com/kraft001/yard-restful).

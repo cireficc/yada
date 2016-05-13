@@ -1,0 +1,10 @@
+--title "YADA API Documentation"
+--plugin restful
+--markup-provider=redcarpet
+--markup=markdown
+--readme API_README.md
+--output-dir ./public/api/docs
+app/models/**/*.rb
+app/controllers/**/*.rb
+--exclude app/controllers/application_controller.rb
+--exclude app/models/application_record.rb
