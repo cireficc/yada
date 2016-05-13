@@ -1,3 +1,141 @@
+# @restful_api 1.0
+#
+# ### Enums
+#
+# `enum relationship_status: [:single, :seeing_someone, :married, :open_relationship]`
+#
+# `enum relationship_type: [:monogamous, :polygamous]`
+#
+# `enum longest_relationship: [:six_months, :one_year, :two_years, :three_years, :four_years, :five_years, :more_than_five_years]`
+#
+# `enum body_type: [:rather_not_say, :thin, :average_build, :a_little_extra, :curvy, :full_figured, :fit, :jacked]`
+#
+# `enum hair_color: [:black, :brown, :blond, :auburn, :chestnut, :red, :gray, :white, :dyed, :bald]`
+#
+# `enum eye_color: [:amber, :blue, :brown, :gray, :green, :hazel, :other]`
+#
+# `enum diet: [:omnivore, :vegetarian, :vegan, :kosher, :halal]`
+#
+# `enum smoking: [:no, :sometimes, :often]`
+#
+# `enum drinking: [:no, :socially, :often]`
+#
+# `enum drugs: [:no, :sometimes, :often]`
+#
+# `enum religion: [:agnosticism, :atheism, :buddhism, :catholicism, :christianity, :hinduism, :islam, :judaism, :sikh, :other]`
+#
+# `enum religion_importance: [:not_important, :somewhat_important, :important]`
+#
+# `enum zodiac_sign: [:aquarius, :pisces, :aries, :taurus, :gemini, :cancer, :leo, :virgo, :libra, :scorpio, :sagittarius, :capricorn]`
+#
+# `enum education: [:high_school, :two_year_college, :vocational_school, :bachelor, :master, :doctorate, :other]`
+#
+# `enum education_status: [:dropped_out, :working_on, :completed]`
+#
+# `enum ambitiousness: [:not_ambitious, :somewhat_ambitious, :ambitious, :very_ambitious]`
+#
+# `enum wants_children: [:maybe_want, :want, :does_not_want]`
+#
+# `enum gender_interest: [:men, :women, :everyone]`
+#
+# @property [Integer] id The id of the User
+# @property [String] username The username of the User
+# @property [String] email The email of the User
+# @property [String] name The name of the User
+# @property [Date] birthdate When the User was born
+# @property [String] country The country of the User
+# @property [String] city The city of the User
+# @property [String] zip_code The zip code of the User
+# @property [String] address The address of the User
+# @property [Float] latitude The latitude of the User
+# @property [Float] longitude The longitude of the User
+# @property [String[]] ethnicity The ethnicity of the User
+# @property [Integer] relationship_status The relationship status of the User
+# @property [Integer] relationship_type The relationship type of the User
+# @property [Integer] longest_relationship The longest relationship of the User
+# @property [Integer] height The height of the User
+# @property [Integer] body_type The body type of the User
+# @property [Integer] hair_color The hair color of the User
+# @property [Integer] eye_color The eye color of the User
+# @property [Integer] diet The diet of the User
+# @property [Integer] smoking How often the User smokes
+# @property [Integer] drinking How often the User drinks
+# @property [Integer] drugs How often the User does drugs
+# @property [Integer] religion The religion of the User
+# @property [Integer] religion_importance How important the User's religion is to them
+# @property [Integer] zodiac_sign The zodiac sign of the User
+# @property [Integer] education The level of education of the user
+# @property [Integer] education_status The education status of the User
+# @property [Integer] ambitiousness How ambitious the User is
+# @property [Boolean] has_children The has children of the User
+# @property [Integer] wants_children The User's desire to have children
+# @property [String] catch The User's short phrase to catch a potential matche's attention
+# @property [String] summary The summary of the User
+# @property [String] current_life What the User is doing currently in their life
+# @property [String] free_time What the User does in their free time
+# @property [String] favorite The favorite things of the User
+# @property [String] most_important The most important things to the User
+# @property [String] talk_more A potential match should message the User if
+# @property [Integer] gender_interest The genders that the User is interested in
+# @property [Integer] age_min The minimum age the User wants to match with
+# @property [Integer] age_max The maximum age the User wants to match with
+# @property [Boolean] desire_single Whether or not the User desires matches that are single
+# @property [Boolean] desire_near Whether or not the User desires matches near to them
+# @property [String[]] relationship_interest The User's relationship interests
+# @property [Date] create_at When the User was created
+# @property [Date] updated_at When the Phrase was last updated
+#
+# @example
+#  ```json
+#   { "id": 1,
+#     "username": "chriscirefice",
+#     "email": "email@domain.com",
+#     "name": "chris",
+#     "birthdate": "1992-10-12T00:00:00.000Z",
+#     "country": null,
+#     "city": null,
+#     "zip_code": null,
+#     "address": null,
+#     "latitude": null,
+#     "longitude": null,
+#     "ethnicity": ["white"],
+#     "relationship_status": "single",
+#     "relationship_type": "monogamous",
+#     "longest_relationship": "one_year",
+#     "height": 168,
+#     "body_type": "average_build",
+#     "hair_color": "brown",
+#     "eye_color": "brown",
+#     "diet": "omnivore",
+#     "smoking": "no",
+#     "drinking": "socially",
+#     "drugs": "no",
+#     "religion": "atheism",
+#     "religion_importance": "not_important",
+#     "zodiac_sign": "libra",
+#     "education": "bachelor",
+#     "education_status": "working_on",
+#     "ambitiousness": "very_ambitious",
+#     "has_children": false,
+#     "wants_children": "want",
+#     "catch": "Chris is a cool guy!",
+#     "summary": "A summary",
+#     "current_life": "What I'm doing with my life",
+#     "free_time": "What I do in my free time",
+#     "favorite": "My favorite things",
+#     "most_important": "Things that are most important to me",
+#     "talk_more": "We should talk if...",
+#     "gender_interest": "women",
+#     "age_min": 18,
+#     "age_max": 32,
+#     "desire_single": true,
+#     "desire_near": false,
+#     "relationship_interest": ["new friends","long-term dating"],
+#     "created_at": "2016-05-13T06:37:30.428Z",
+#     "updated_at": "2016-05-13T06:37:30.428Z"
+#   }
+#  ```
+
 class User < ApplicationRecord
   
   RESERVED = %w{
