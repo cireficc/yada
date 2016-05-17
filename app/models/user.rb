@@ -38,52 +38,52 @@
 #
 # `enum gender_interest: [:men, :women, :everyone]`
 #
-# @property [Integer] id The id of the User
-# @property [String] username The username of the User
-# @property [String] email The email of the User
-# @property [String] name The name of the User
-# @property [Date] birthdate When the User was born
-# @property [String] country The country of the User
-# @property [String] city The city of the User
-# @property [String] zip_code The zip code of the User
-# @property [String] address The address of the User
-# @property [Float] latitude The latitude of the User
-# @property [Float] longitude The longitude of the User
-# @property [String[]] ethnicity The ethnicity of the User
-# @property [Integer] relationship_status The relationship status of the User
-# @property [Integer] relationship_type The relationship type of the User
-# @property [Integer] longest_relationship The longest relationship of the User
-# @property [Integer] height The height of the User
-# @property [Integer] body_type The body type of the User
-# @property [Integer] hair_color The hair color of the User
-# @property [Integer] eye_color The eye color of the User
-# @property [Integer] diet The diet of the User
-# @property [Integer] smoking How often the User smokes
-# @property [Integer] drinking How often the User drinks
-# @property [Integer] drugs How often the User does drugs
-# @property [Integer] religion The religion of the User
-# @property [Integer] religion_importance How important the User's religion is to them
-# @property [Integer] zodiac_sign The zodiac sign of the User
+# @property [Integer] id The id of the user
+# @property [String] username The username of the user
+# @property [String] email The email of the user
+# @property [String] name The name of the user
+# @property [Date] birthdate When the user was born
+# @property [String] country The country of the user
+# @property [String] city The city of the user
+# @property [String] zip_code The zip code of the user
+# @property [String] address The address of the user
+# @property [Float] latitude The latitude of the user
+# @property [Float] longitude The longitude of the user
+# @property [String[]] ethnicity The ethnicity of the user
+# @property [Integer] relationship_status The relationship status of the user
+# @property [Integer] relationship_type The relationship type of the user
+# @property [Integer] longest_relationship The longest relationship of the user
+# @property [Integer] height The height of the user
+# @property [Integer] body_type The body type of the user
+# @property [Integer] hair_color The hair color of the user
+# @property [Integer] eye_color The eye color of the user
+# @property [Integer] diet The diet of the user
+# @property [Integer] smoking How often the user smokes
+# @property [Integer] drinking How often the user drinks
+# @property [Integer] drugs How often the user does drugs
+# @property [Integer] religion The religion of the user
+# @property [Integer] religion_importance How important the user's religion is to them
+# @property [Integer] zodiac_sign The zodiac sign of the user
 # @property [Integer] education The level of education of the user
-# @property [Integer] education_status The education status of the User
-# @property [Integer] ambitiousness How ambitious the User is
-# @property [Boolean] has_children The has children of the User
-# @property [Integer] wants_children The User's desire to have children
-# @property [String] catch The User's short phrase to catch a potential matche's attention
-# @property [String] summary The summary of the User
-# @property [String] current_life What the User is doing currently in their life
-# @property [String] free_time What the User does in their free time
-# @property [String] favorite The favorite things of the User
-# @property [String] most_important The most important things to the User
-# @property [String] talk_more A potential match should message the User if
-# @property [Integer] gender_interest The genders that the User is interested in
-# @property [Integer] age_min The minimum age the User wants to match with
-# @property [Integer] age_max The maximum age the User wants to match with
-# @property [Boolean] desire_single Whether or not the User desires matches that are single
-# @property [Boolean] desire_near Whether or not the User desires matches near to them
-# @property [String[]] relationship_interest The User's relationship interests
-# @property [Date] create_at When the User was created
-# @property [Date] updated_at When the Phrase was last updated
+# @property [Integer] education_status The education status of the user
+# @property [Integer] ambitiousness How ambitious the user is
+# @property [Boolean] has_children The has children of the user
+# @property [Integer] wants_children The user's desire to have children
+# @property [String] catch The user's short phrase to catch a potential matche's attention
+# @property [String] summary The summary of the user
+# @property [String] current_life What the user is doing currently in their life
+# @property [String] free_time What the user does in their free time
+# @property [String] favorite The favorite things of the user
+# @property [String] most_important The most important things to the user
+# @property [String] talk_more A potential match should message the user if
+# @property [Integer] gender_interest The genders that the user is interested in
+# @property [Integer] age_min The minimum age the user wants to match with
+# @property [Integer] age_max The maximum age the user wants to match with
+# @property [Boolean] desire_single Whether or not the user desires matches that are single
+# @property [Boolean] desire_near Whether or not the user desires matches near to them
+# @property [String[]] relationship_interest The user's relationship interests
+# @property [Date] create_at When the user was created
+# @property [Date] updated_at When the user was last updated
 #
 # @example
 #  ```json
@@ -135,9 +135,9 @@
 #     "updated_at": "2016-05-13T06:37:30.428Z"
 #   }
 #  ```
-
 class User < ApplicationRecord
   
+  # Reserved usernames that cannot be chosen by users
   RESERVED = %w{
     achievements
     admin
@@ -192,7 +192,9 @@ class User < ApplicationRecord
   
   validates :height, inclusion: { in: 50..300, message: "must be between 50 and 300 centimeters" }
   
+  # The age range that is valid for users
   VALID_AGE_RANGE = 18..99
+  # The message for when the age range is invalid
   VALID_AGE_RANGE_MESSAGE = "must be between 18 and 99"
   
   validates :age_min, inclusion: { in: VALID_AGE_RANGE, message: VALID_AGE_RANGE_MESSAGE }
