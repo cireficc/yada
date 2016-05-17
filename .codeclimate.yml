@@ -13,6 +13,9 @@ engines:
       languages:
       - ruby
       - javascript
+    exclude_fingerprints:
+    - 79536c6f949eba9317227c4e88951f1f
+    - cbbd185a9beda75b6682cdf88c4ba433
 ratings:
   paths:
   - app/**
