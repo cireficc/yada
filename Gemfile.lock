@@ -41,6 +41,9 @@ GEM
     arel (7.0.0)
     bcrypt (3.1.11)
     builder (3.2.2)
+    bullet (5.0.0)
+      activesupport (>= 3.0.0)
+      uniform_notifier (~> 1.9.0)
     byebug (8.2.5)
     concurrent-ruby (1.0.2)
     coveralls (0.8.13)
@@ -76,6 +79,8 @@ GEM
     puma (3.4.0)
     rack (2.0.0.rc1)
       json
+    rack-mini-profiler (0.9.9.2)
+      rack (>= 1.2.0)
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (5.0.0.rc1)
@@ -132,6 +137,7 @@ GEM
     tins (1.6.0)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
+    uniform_notifier (1.9.0)
     websocket-driver (0.6.3)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.2)
@@ -144,11 +150,13 @@ PLATFORMS
 
 DEPENDENCIES
   bcrypt (~> 3.1.7)
+  bullet (~> 5.0)
   byebug
   coveralls
   listen (~> 3.0.5)
   pg (~> 0.18)
   puma (~> 3.0)
+  rack-mini-profiler (~> 0.9.9.2)
   rails (>= 5.0.0.rc1, < 5.1)
   redcarpet
   simplecov
