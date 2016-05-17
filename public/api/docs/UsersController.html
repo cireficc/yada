@@ -54,8 +54,656 @@
 		<div class="service">
   <h1 class="noborder title">YADA API Documentation</h1>
     <a class="back" href="index.html" title="back to the overview">&laquo; back to overview</a>
-    <h2>UsersController</h2>
+    <h2>Users [1.0]</h2>
+    <div class="description">
+  <p>Users</p>
+
+</div>
+
+
+  <div id="Services" class="method_details_list">
     
+		<div class="method">
+      <h3>index</h3>
+			<p class="method_desc">View list of all users</p>
+
+      
+        <div class="resource_url even">
+          <h4>URL</h4>
+          <span class="action">GET</span>
+          <span class="url">/users</span>
+        </div>
+      
+
+      
+
+
+      
+
+
+      
+        <div class="parameters odd">
+          <h4>Response Object</h4>
+          <ul>
+            <li>
+              <span class="type"><tt>Array&lt;<span class='object_link'><a href="User.html" title="User (class)">User</a></span>&gt;</tt></span>
+              <span class="text"><p>List of users</p>
+</span>
+            </li>
+          </ul>
+        </div>
+      
+
+			
+		</div>
+    
+		<div class="method">
+      <h3>show</h3>
+			<p class="method_desc">View a user</p>
+
+      
+        <div class="resource_url even">
+          <h4>URL</h4>
+          <span class="action">GET</span>
+          <span class="url">/users/:id</span>
+        </div>
+      
+
+      
+
+  <div class="parameters odd">
+    
+      <h4>Required Parameters</h4>
+    
+		<ul>
+  		
+				<li>
+					<span class="name">id</span>
+					<span class="type"><tt>Integer</tt></span>
+					<span class="text"><p>Identifier the user</p>
+</span>
+				</li>
+  		
+	  </ul>
+	</div>
+
+
+      
+
+
+      
+        <div class="parameters even">
+          <h4>Response Object</h4>
+          <ul>
+            <li>
+              <span class="type"><tt><span class='object_link'><a href="User.html" title="User (class)">User</a></span></tt></span>
+              <span class="text"><p>The requested user</p>
+</span>
+            </li>
+          </ul>
+        </div>
+      
+
+			
+		</div>
+    
+		<div class="method">
+      <h3>create</h3>
+			<p class="method_desc">Create a new user</p>
+
+      
+        <div class="resource_url odd">
+          <h4>URL</h4>
+          <span class="action">POST</span>
+          <span class="url">/users</span>
+        </div>
+      
+
+      
+
+  <div class="parameters even">
+    
+      <h4>Required Parameters</h4>
+    
+		<ul>
+  		
+				<li>
+					<span class="name">username</span>
+					<span class="type"><tt>String</tt></span>
+					<span class="text"><p>The username of the user</p>
+</span>
+				</li>
+  		
+				<li>
+					<span class="name">password</span>
+					<span class="type"><tt>String</tt></span>
+					<span class="text"><p>The desired password of the user</p>
+</span>
+				</li>
+  		
+				<li>
+					<span class="name">password_confirmation</span>
+					<span class="type"><tt>Integer</tt></span>
+					<span class="text"><p>Confirmation of the password</p>
+</span>
+				</li>
+  		
+				<li>
+					<span class="name">email</span>
+					<span class="type"><tt>String</tt></span>
+					<span class="text"><p>The email of the user</p>
+</span>
+				</li>
+  		
+				<li>
+					<span class="name">name</span>
+					<span class="type"><tt>String</tt></span>
+					<span class="text"><p>The name of the user</p>
+</span>
+				</li>
+  		
+				<li>
+					<span class="name">birthdate</span>
+					<span class="type"><tt>Date</tt></span>
+					<span class="text"><p>When the user was born</p>
+</span>
+				</li>
+  		
+	  </ul>
+	</div>
+
+
+      
+
+
+      
+        <div class="parameters odd">
+          <h4>Response Object</h4>
+          <ul>
+            <li>
+              <span class="type"><tt><span class='object_link'><a href="User.html" title="User (class)">User</a></span></tt></span>
+              <span class="text"><p>The created user</p>
+</span>
+            </li>
+          </ul>
+        </div>
+      
+
+			
+				<div class="examples">
+					<h4>Examples</h4>
+					
+						<div class="example">
+							
+							
+							
+							<span class="description">
+								
+									
+										A valid request
+									
+								
+							</span>
+							<span class="hash request">
+								<strong class="type">Request</strong>
+								
+									
+										<pre class="code json"><code class="json">{
+  &quot;user&quot;: {
+    &quot;username&quot;: &quot;amykun&quot;,
+    &quot;password&quot;: &quot;amy&quot;,
+    &quot;password_confirmation&quot;: &quot;amy&quot;,
+    &quot;email&quot;: &quot;amy@domain.com&quot;,
+    &quot;name&quot;: &quot;Amy&quot;,
+    &quot;birthdate&quot;: &quot;1990-7-4T00:00:00.000Z&quot;
+  }
+}
+</code></pre>
+
+									
+								
+							</span>
+							<span class="hash response">
+								<strong class="type">Response</strong>
+								
+							</span>
+							<span class="description">
+								
+							</span>
+						</div>
+					
+				</div>
+			
+		</div>
+    
+		<div class="method">
+      <h3>update</h3>
+			<p class="method_desc">Update a user</p>
+
+      
+        <div class="resource_url even">
+          <h4>URL</h4>
+          <span class="action">PATCH</span>
+          <span class="url">/users/:id</span>
+        </div>
+      
+
+      
+
+  <div class="parameters odd">
+    
+      <h4>Required Parameters</h4>
+    
+		<ul>
+  		
+				<li>
+					<span class="name">id</span>
+					<span class="type"><tt>Integer</tt></span>
+					<span class="text"><p>The id of the User</p>
+</span>
+				</li>
+  		
+				<li>
+					<span class="name">username</span>
+					<span class="type"><tt>String</tt></span>
+					<span class="text"><p>The username of the User</p>
+</span>
+				</li>
+  		
+				<li>
+					<span class="name">email</span>
+					<span class="type"><tt>String</tt></span>
+					<span class="text"><p>The email of the User</p>
+</span>
+				</li>
+  		
+				<li>
+					<span class="name">name</span>
+					<span class="type"><tt>String</tt></span>
+					<span class="text"><p>The name of the User</p>
+</span>
+				</li>
+  		
+				<li>
+					<span class="name">birthdate</span>
+					<span class="type"><tt>Date</tt></span>
+					<span class="text"><p>When the User was born</p>
+</span>
+				</li>
+  		
+				<li>
+					<span class="name">ethnicity</span>
+					<span class="type"><tt>String[]</tt></span>
+					<span class="text"><p>The ethnicity of the User</p>
+</span>
+				</li>
+  		
+				<li>
+					<span class="name">relationship_status</span>
+					<span class="type"><tt>Integer</tt></span>
+					<span class="text"><p>The relationship status of the User</p>
+</span>
+				</li>
+  		
+				<li>
+					<span class="name">relationship_type</span>
+					<span class="type"><tt>Integer</tt></span>
+					<span class="text"><p>The relationship type of the User</p>
+</span>
+				</li>
+  		
+				<li>
+					<span class="name">longest_relationship</span>
+					<span class="type"><tt>Integer</tt></span>
+					<span class="text"><p>The longest relationship of the User</p>
+</span>
+				</li>
+  		
+				<li>
+					<span class="name">height</span>
+					<span class="type"><tt>Integer</tt></span>
+					<span class="text"><p>The height of the User</p>
+</span>
+				</li>
+  		
+				<li>
+					<span class="name">body_type</span>
+					<span class="type"><tt>Integer</tt></span>
+					<span class="text"><p>The body type of the User</p>
+</span>
+				</li>
+  		
+				<li>
+					<span class="name">hair_color</span>
+					<span class="type"><tt>Integer</tt></span>
+					<span class="text"><p>The hair color of the User</p>
+</span>
+				</li>
+  		
+				<li>
+					<span class="name">eye_color</span>
+					<span class="type"><tt>Integer</tt></span>
+					<span class="text"><p>The eye color of the User</p>
+</span>
+				</li>
+  		
+				<li>
+					<span class="name">diet</span>
+					<span class="type"><tt>Integer</tt></span>
+					<span class="text"><p>The diet of the User</p>
+</span>
+				</li>
+  		
+				<li>
+					<span class="name">smoking</span>
+					<span class="type"><tt>Integer</tt></span>
+					<span class="text"><p>How often the User smokes</p>
+</span>
+				</li>
+  		
+				<li>
+					<span class="name">drinking</span>
+					<span class="type"><tt>Integer</tt></span>
+					<span class="text"><p>How often the User drinks</p>
+</span>
+				</li>
+  		
+				<li>
+					<span class="name">drugs</span>
+					<span class="type"><tt>Integer</tt></span>
+					<span class="text"><p>How often the User does drugs</p>
+</span>
+				</li>
+  		
+				<li>
+					<span class="name">religion</span>
+					<span class="type"><tt>Integer</tt></span>
+					<span class="text"><p>The religion of the User</p>
+</span>
+				</li>
+  		
+				<li>
+					<span class="name">religion_importance</span>
+					<span class="type"><tt>Integer</tt></span>
+					<span class="text"><p>How important the User&#39;s religion is to them</p>
+</span>
+				</li>
+  		
+				<li>
+					<span class="name">zodiac_sign</span>
+					<span class="type"><tt>Integer</tt></span>
+					<span class="text"><p>The zodiac sign of the User</p>
+</span>
+				</li>
+  		
+				<li>
+					<span class="name">education</span>
+					<span class="type"><tt>Integer</tt></span>
+					<span class="text"><p>The level of education of the user</p>
+</span>
+				</li>
+  		
+				<li>
+					<span class="name">education_status</span>
+					<span class="type"><tt>Integer</tt></span>
+					<span class="text"><p>The education status of the User</p>
+</span>
+				</li>
+  		
+				<li>
+					<span class="name">ambitiousness</span>
+					<span class="type"><tt>Integer</tt></span>
+					<span class="text"><p>How ambitious the User is</p>
+</span>
+				</li>
+  		
+				<li>
+					<span class="name">has_children</span>
+					<span class="type"><tt>Boolean</tt></span>
+					<span class="text"><p>The has children of the User</p>
+</span>
+				</li>
+  		
+				<li>
+					<span class="name">wants_children</span>
+					<span class="type"><tt>Integer</tt></span>
+					<span class="text"><p>The User&#39;s desire to have children</p>
+</span>
+				</li>
+  		
+				<li>
+					<span class="name">catch</span>
+					<span class="type"><tt>String</tt></span>
+					<span class="text"><p>The User&#39;s short phrase to catch a potential matche&#39;s attention</p>
+</span>
+				</li>
+  		
+				<li>
+					<span class="name">summary</span>
+					<span class="type"><tt>String</tt></span>
+					<span class="text"><p>The summary of the User</p>
+</span>
+				</li>
+  		
+				<li>
+					<span class="name">current_life</span>
+					<span class="type"><tt>String</tt></span>
+					<span class="text"><p>What the User is doing currently in their life</p>
+</span>
+				</li>
+  		
+				<li>
+					<span class="name">free_time</span>
+					<span class="type"><tt>String</tt></span>
+					<span class="text"><p>What the User does in their free time</p>
+</span>
+				</li>
+  		
+				<li>
+					<span class="name">favorite</span>
+					<span class="type"><tt>String</tt></span>
+					<span class="text"><p>The favorite things of the User</p>
+</span>
+				</li>
+  		
+				<li>
+					<span class="name">most_important</span>
+					<span class="type"><tt>String</tt></span>
+					<span class="text"><p>The most important things to the User</p>
+</span>
+				</li>
+  		
+				<li>
+					<span class="name">talk_more</span>
+					<span class="type"><tt>String</tt></span>
+					<span class="text"><p>A potential match should message the User if</p>
+</span>
+				</li>
+  		
+				<li>
+					<span class="name">gender_interest</span>
+					<span class="type"><tt>Integer</tt></span>
+					<span class="text"><p>The genders that the User is interested in</p>
+</span>
+				</li>
+  		
+				<li>
+					<span class="name">age_min</span>
+					<span class="type"><tt>Integer</tt></span>
+					<span class="text"><p>The minimum age the User wants to match with</p>
+</span>
+				</li>
+  		
+				<li>
+					<span class="name">age_max</span>
+					<span class="type"><tt>Integer</tt></span>
+					<span class="text"><p>The maximum age the User wants to match with</p>
+</span>
+				</li>
+  		
+				<li>
+					<span class="name">desire_single</span>
+					<span class="type"><tt>Boolean</tt></span>
+					<span class="text"><p>Whether or not the User desires matches that are single</p>
+</span>
+				</li>
+  		
+				<li>
+					<span class="name">desire_near</span>
+					<span class="type"><tt>Boolean</tt></span>
+					<span class="text"><p>Whether or not the User desires matches near to them</p>
+</span>
+				</li>
+  		
+				<li>
+					<span class="name">relationship_interest</span>
+					<span class="type"><tt>String[]</tt></span>
+					<span class="text"><p>The User&#39;s relationship interests</p>
+</span>
+				</li>
+  		
+	  </ul>
+	</div>
+
+
+      
+
+
+      
+        <div class="parameters even">
+          <h4>Response Object</h4>
+          <ul>
+            <li>
+              <span class="type"><tt><span class='object_link'><a href="User.html" title="User (class)">User</a></span></tt></span>
+              <span class="text"><p>The updated user</p>
+</span>
+            </li>
+          </ul>
+        </div>
+      
+
+			
+				<div class="examples">
+					<h4>Examples</h4>
+					
+						<div class="example">
+							
+							
+							
+							<span class="description">
+								
+									
+										A valid request
+									
+								
+							</span>
+							<span class="hash request">
+								<strong class="type">Request</strong>
+								
+									
+										<pre class="code json"><code class="json">{
+  &quot;user&quot;: {
+    &quot;username&quot;: &quot;amykun&quot;,
+    &quot;email&quot;: &quot;amy@domain.com&quot;,
+    &quot;name&quot;: &quot;UPDATED Amy&quot;,
+    &quot;birthdate&quot;: &quot;1990-7-4T00:00:00.000Z&quot;,
+    &quot;ethnicity&quot;: [&quot;white&quot;, &quot;asian&quot;],
+    &quot;relationship_status&quot;: 0,
+    &quot;relationship_type&quot;: 0,
+    &quot;longest_relationship&quot;: 0,
+    &quot;height&quot;: 155,
+    &quot;body_type&quot;: 1,
+    &quot;hair_color&quot;: 2,
+    &quot;eye_color&quot;: 2,
+    &quot;diet&quot;: 1,
+    &quot;smoking&quot;: 2,
+    &quot;drinking&quot;: 1,
+    &quot;drugs&quot;: 2,
+    &quot;religion&quot;: 0,
+    &quot;religion_importance&quot;: 0,
+    &quot;zodiac_sign&quot;: 1,
+    &quot;education&quot;: 0,
+    &quot;education_status&quot;: 0,
+    &quot;ambitiousness&quot;: 2,
+    &quot;has_children&quot;: false,
+    &quot;wants_children&quot;: 2,
+    &quot;catch&quot;: &quot;I&#39;m not as cool as Chris&quot;,
+    &quot;summary&quot;: &quot;Nothing special about me&quot;,
+    &quot;current_life&quot;: &quot;Forever alone&quot;,
+    &quot;free_time&quot;: &quot;I don&#39;t have free time&quot;,
+    &quot;favorite&quot;: &quot;Favorite all the things&quot;,
+    &quot;most_important&quot;: &quot;Everything is important&quot;,
+    &quot;talk_more&quot;: &quot;Just message me you panzee&quot;,
+    &quot;gender_interest&quot;: 1,
+    &quot;age_min&quot;: 22,
+    &quot;age_max&quot;: 25,
+    &quot;desire_single&quot;: true,
+    &quot;desire_near&quot;: true,
+    &quot;relationship_interest&quot;: [&quot;new friends&quot;, &quot;casual sex&quot;]
+  }
+}
+</code></pre>
+
+									
+								
+							</span>
+							<span class="hash response">
+								<strong class="type">Response</strong>
+								
+							</span>
+							<span class="description">
+								
+							</span>
+						</div>
+					
+				</div>
+			
+		</div>
+    
+		<div class="method">
+      <h3>destroy</h3>
+			<p class="method_desc">Delete a user</p>
+
+      
+        <div class="resource_url odd">
+          <h4>URL</h4>
+          <span class="action">DELETE</span>
+          <span class="url">/users/:id</span>
+        </div>
+      
+
+      
+
+  <div class="parameters even">
+    
+      <h4>Required Parameters</h4>
+    
+		<ul>
+  		
+				<li>
+					<span class="name">id</span>
+					<span class="type"><tt>Integer</tt></span>
+					<span class="text"><p>The id of the User</p>
+</span>
+				</li>
+  		
+	  </ul>
+	</div>
+
+
+      
+
+
+      
+        
+
+
+      
+
+			
+		</div>
+    
+  </div>
 
 
 </div>
@@ -64,7 +712,7 @@
 	</div>
 
     <div id="footer">
-  Generated on Fri May 13 07:06:55 2016 with ruby-2.3.0
+  Generated on Tue May 17 00:27:34 2016 with ruby-2.3.0
 </div>
 
   </body>
