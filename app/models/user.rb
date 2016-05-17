@@ -136,6 +136,8 @@
 #   }
 #  ```
 class User < ApplicationRecord
+  acts_as_taggable
+  acts_as_taggable_on :sexual_genders, :sexual_orientations, :pets, :interests
   
   # Reserved usernames that cannot be chosen by users
   RESERVED = %w{
