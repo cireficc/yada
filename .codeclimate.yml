@@ -22,3 +22,4 @@ exclude_paths:
 - test/**/*
 - "**/vendor/**/*"
 - public/**/*
+- db/migrate/**
