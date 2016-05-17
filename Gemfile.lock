@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/cireficc/acts-as-taggable-on.git
+  revision: a02f8fdf85952894f74779c80fa891af6415fefe
+  specs:
+    acts-as-taggable-on (3.5.0)
+      activerecord (>= 3.2, < 5)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -149,6 +156,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  acts-as-taggable-on!
   bcrypt (~> 3.1.7)
   bullet (~> 5.0)
   byebug
@@ -167,4 +175,4 @@ DEPENDENCIES
   yard-restful (~> 1.2.3)
 
 BUNDLED WITH
-   1.12.2
+   1.12.4

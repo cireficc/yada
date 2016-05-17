@@ -13,6 +13,8 @@ gem 'puma', '~> 3.0'
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
+# Use Acts As Taggable for tags
+gem 'acts-as-taggable-on', github: 'cireficc/acts-as-taggable-on'
 
 # Use Yard-restful for API documentation; include its dependencies (Yard and Redcarpet [Markdown gem])
 gem 'yard'
