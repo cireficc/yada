@@ -11,7 +11,7 @@ class UsersController < ApplicationController
   def index
     @users = User.all
 
-    render json: @users
+    render json: @users, each_serializer: SimpleUserSerializer
   end
 
   # @url /users/:id
@@ -23,7 +23,7 @@ class UsersController < ApplicationController
   #
   # @response [User] The requested user
   def show
-    render json: @user
+    render json: @user, serializer: CompleteUserSerializer
   end
 
   # @url /users
@@ -58,7 +58,8 @@ class UsersController < ApplicationController
     @user = User.new(user_create_params)
 
     if @user.save
-      render json: @user, status: :created, location: @user
+      render  json: @user, status: :created, location: @user,
+              serializer: CompleteUserSerializer
     else
       render json: @user.errors, status: :unprocessable_entity
     end
@@ -157,7 +158,7 @@ class UsersController < ApplicationController
   #  ```
   def update
     if @user.update(user_update_params)
-      render json: @user
+      render json: @user, serializer: CompleteUserSerializer
     else
       render json: @user.errors, status: :unprocessable_entity
     end
