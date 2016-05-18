@@ -1,6 +1,6 @@
 class CompleteUserSerializer < ActiveModel::Serializer
-  root :user
-  attributes :id, :username, :name, :birthdate, :country, :city, :ethnicity,
+  root :user_create_params
+  attributes  :id, :username, :name, :birthdate, :country, :city, :ethnicity,
               :relationship_status, :relationship_type, :longest_relationship,
               :height, :body_type, :hair_color, :eye_color, :diet, :smoking,
               :drinking, :drugs, :religion, :religion_importance, :zodiac_sign,

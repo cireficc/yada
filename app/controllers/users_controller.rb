@@ -58,7 +58,8 @@ class UsersController < ApplicationController
     @user = User.new(user_create_params)
 
     if @user.save
-      render json: @user, status: :created, location: @user, serializer: CompleteUserSerializer
+      render  json: @user, status: :created, location: @user,
+              serializer: CompleteUserSerializer
     else
       render json: @user.errors, status: :unprocessable_entity
     end
