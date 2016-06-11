@@ -59,7 +59,7 @@ module Api::V1
       @user = User.new(user_create_params)
   
       if @user.save
-        render  json: @user, status: :created, location: @user,
+        render  json: @user, status: :created,
                 serializer: CompleteUserSerializer
       else
         render json: @user.errors, status: :unprocessable_entity
