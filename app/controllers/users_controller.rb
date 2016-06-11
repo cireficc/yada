@@ -193,6 +193,7 @@ class UsersController < ApplicationController
                                     :education, :education_status, :ambitiousness, :has_children, :wants_children,
                                     :catch, :summary, :current_life, :free_time, :favorite, :most_important, :talk_more,
                                     :gender_interest, :age_min, :age_max, :desire_single, :desire_near, :tag_list,
-                                    ethnicity: [], relationship_interest: []])
+                                    :sexual_gender_list, :sexual_orientation_list, :pet_list, :interest_list, ethnicity: [],
+                                    relationship_interest: []])
     end
 end
