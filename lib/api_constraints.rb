@@ -5,6 +5,7 @@ class ApiConstraints
   end
 
   def matches?(req)
-    @default || req.headers['Accept'].include?("application/vnd.yada.v#{@version}")
+    @version_string = "application/vnd.yada.v#{@version}"
+    @default || req.headers["Accept"].include?(@version_string)
   end
 end
