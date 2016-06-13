@@ -21,3 +21,8 @@ To view what still needs to be documented: `bundle exec yardoc --list-undoc`
 ## Requirements
 - Ruby 2.3.0+
 - [Bundler](http://bundler.io) 1.10.6+
+- [Foreman](https://github.com/ddollar/foreman) (`gem install foreman`)
+
+## Starting the server
+
+Run `foreman start`!
