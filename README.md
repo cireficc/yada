@@ -23,6 +23,13 @@ To view what still needs to be documented: `bundle exec yardoc --list-undoc`
 - [Bundler](http://bundler.io) 1.10.6+
 - [Foreman](https://github.com/ddollar/foreman) (`gem install foreman`)
 
+## Running migrations
+
+Migrations need to be run for staging and production after changes to the schema:
+
+- `heroku run rake db:migrate --app yada-staging`
+- `heroku run rake db:migrate --app yada-production`
+
 ## Starting the server
 
 Run `foreman start`!
