@@ -32,6 +32,10 @@ gem 'yard-restful', '~> 1.2.3'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+  # Use Rspec,FactoryGirl and DatabaseCleaner for testing
+  gem 'rspec-rails', '~> 3.5.0.beta4'
+  gem 'factory_girl', '~> 4.7'
+  gem 'database_cleaner', '~> 1.5.3'
 end
 
 group :development do
