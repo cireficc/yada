@@ -1,7 +1,6 @@
 require "rails_helper"
 
 RSpec.describe Api::V1::UsersController, type: :controller do
-
   before {
     @chris = create(:chris)
   }
@@ -19,16 +18,14 @@ RSpec.describe Api::V1::UsersController, type: :controller do
     params[:user][:password] = "bob"
     params[:user][:password_confirmation] = "bob"
 
-    expect { post(:create, params: params) }
-      .to(change { User.count }.by(1))
+    expect { post(:create, params: params) }.to(change { User.count }.by(1))
     assert_response(201)
   end
 
   it "should not create user if parameters invalid" do
     @bob = User.new(username: "bob/", birthdate: 18.years.ago,
                     height: 301, age_min: 17, age_max: 100)
-    expect { post(:create, params: { user: @bob.attributes }) }
-      .to(change { User.count }.by(0))
+    expect { post(:create, params: { user: @bob.attributes }) }.to(change { User.count }.by(0))
     assert_response(:unprocessable_entity)
   end
 
@@ -49,7 +46,7 @@ RSpec.describe Api::V1::UsersController, type: :controller do
   end
 
   it "should destroy user" do
-    expect { delete(:destroy, params: { id: @chris}) }
+    expect { delete(:destroy, params: { id: @chris }) }
       .to(change { User.count }.by(-1))
     assert_response(204)
   end

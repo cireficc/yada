@@ -1,7 +1,7 @@
-require 'support/factory_girl'
-require 'support/database_cleaner'
-require 'coveralls'
-Coveralls.wear!('rails')
+require "support/factory_girl"
+require "support/database_cleaner"
+require "coveralls"
+Coveralls.wear!("rails")
 
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
@@ -35,7 +35,7 @@ RSpec.configure do |config|
   end
 
   # Run specs in random order to help identify interdependencies between tests.
-  #config.order = :random
+  config.order = :random
 
   # Seed global randomization in this process using the `--seed` CLI option.
   # Setting this allows you to use `--seed` to deterministically reproduce

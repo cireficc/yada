@@ -1,7 +1,7 @@
 FactoryGirl.define do
   factory :chris, class: User do
     username "chriscirefice"
-    password_digest BCrypt::Password.create('chris', cost: 4)
+    password_digest BCrypt::Password.create("chris", cost: 4)
     email "email@domain.com"
     name "chris"
     birthdate "1992-10-12 00:00:00"
@@ -41,7 +41,7 @@ FactoryGirl.define do
 
   factory :amy, class: User do
     username "amykun"
-    password_digest BCrypt::Password.create('amy', cost: 4)
+    password_digest BCrypt::Password.create("amy", cost: 4)
     email "amy@domain.com"
     name "Amy"
     birthdate "1990-7-4T00:00:00.000Z"
