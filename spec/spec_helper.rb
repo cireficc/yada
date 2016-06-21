@@ -1,7 +1,13 @@
 require "support/factory_girl"
 require "support/database_cleaner"
+require "simplecov"
 require "coveralls"
-Coveralls.wear!("rails")
+# Use the multi-formatter for local coverage generation as well as Coveralls reports
+SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[
+  SimpleCov::Formatter::HTMLFormatter,
+  Coveralls::SimpleCov::Formatter
+]
+SimpleCov.start "rails"
 
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
