@@ -208,7 +208,6 @@ DEPENDENCIES
   byebug
   coveralls
   database_cleaner (~> 1.5.3)
-  devise (~> 4.2)
   devise_token_auth (~> 0.1.38)
   factory_girl (~> 4.7)
   listen (~> 3.0.5)

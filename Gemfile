@@ -13,8 +13,7 @@ gem 'puma', '~> 3.0'
 gem 'active_model_serializers', '~> 0.9.3'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
-# Use Devise for user authentication
-gem 'devise', '~> 4.2'
+# Use Devise Token Auth for user authentication
 gem 'omniauth', '~> 1.3'
 gem 'devise_token_auth', '~> 0.1.38'
 # Use Acts As Taggable for tags
