@@ -136,6 +136,12 @@
 #   }
 #  ```
 class User < ApplicationRecord
+  # Include default devise modules.
+  devise :database_authenticatable, :registerable,
+          :recoverable, :rememberable, :trackable, :validatable,
+          :confirmable, :omniauthable
+  include DeviseTokenAuth::Concerns::User
+
   acts_as_taggable
   acts_as_taggable_on :sexual_genders, :sexual_orientations, :pets, :interests
 
@@ -330,8 +336,6 @@ class User < ApplicationRecord
     women: 1,
     everyone: 2
   }
-
-  has_secure_password
 
 	private
 
