@@ -5,3 +5,7 @@ module Api
     end
   end
 end
+
+class ApplicationController < ActionController::API
+  include DeviseTokenAuth::Concerns::SetUserByToken
+end
