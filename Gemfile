@@ -15,6 +15,10 @@ gem 'active_model_serializers', '~> 0.9.3'
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
+# Use Devise for user authentication
+gem 'devise', '~> 4.2'
+gem 'omniauth', '~> 1.3'
+gem 'devise_token_auth', '~> 0.1.38'
 # Use Acts As Taggable for tags
 gem 'acts-as-taggable-on', github: 'cireficc/acts-as-taggable-on'
 
