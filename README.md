@@ -30,6 +30,10 @@ Migrations need to be run for staging and production after changes to the schema
 - `heroku run rake db:migrate --app yada-staging`
 - `heroku run rake db:migrate --app yada-production`
 
+## Running Tests
+
+Run `rspec spec` to run the test suite. Code coverage is located in `/coverage`; simply open `index.html` to view it.
+
 ## Starting the server
 
 Run `foreman start`!
