@@ -138,8 +138,8 @@
 class User < ApplicationRecord
   # Include default devise modules.
   devise :database_authenticatable, :registerable,
-          :recoverable, :rememberable, :trackable, :validatable,
-          :confirmable, :omniauthable
+          :recoverable, :trackable, :validatable,
+          :confirmable
   include DeviseTokenAuth::Concerns::User
 
   acts_as_taggable
@@ -337,7 +337,7 @@ class User < ApplicationRecord
     everyone: 2
   }
 
-	private
+  private
 
 	def at_least_18
 	  self.errors.add(:birthdate, "must be 18 years or older") if (self.birthdate && 18.years.ago.to_date < self.birthdate)
